@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = () => {
-  return <>Web3 React</>;
+  return <div>Web3 React</div>;
 };
 
 export default Home;
