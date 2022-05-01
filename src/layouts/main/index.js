@@ -12,7 +12,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "./nav-link";
 import Footer from "./footer";
-import WalletData from "./wallet-data";
+// import WalletData from "./wallet-data";
 
 const Links = [
   {
@@ -75,7 +75,7 @@ const MainLayout = ({ children }) => {
               ))}
             </HStack>
           </HStack>
-          <WalletData />
+          {/* <WalletData /> */}
         </Flex>
 
         {isOpen ? (
