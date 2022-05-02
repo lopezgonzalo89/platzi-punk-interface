@@ -1,7 +1,24 @@
-import React from "react";
+import { useWeb3React } from "@web3-react/core";
+import React, { useCallback, useEffect, useState } from "react";
+import { usePlatziPunks } from "../../hooks/usePlatziPunks";
 
 const Home = () => {
-  return <div>Web3 React</div>;
+  const { active } = useWeb3React();
+  const [maxSupply, setMaxSupply] = useState();
+  const platziPunks = usePlatziPunks();
+
+  const getMaxSupply = useCallback(async () => {
+    if (platziPunks) {
+      const result = await platziPunks.methods.maxSupply().call();
+      setMaxSupply(result);
+    }
+  }, [platziPunks]);
+
+  useEffect(() => {
+    getMaxSupply();
+  }, [getMaxSupply]);
+
+  return active ? <div>maxSupply: {maxSupply}</div> : "Conecta tu wallet";
 };
 
 export default Home;

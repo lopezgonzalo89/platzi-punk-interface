@@ -18,7 +18,7 @@ function App() {
 
   return (
     <MainLayout>
-      <Route path="/" component={Home} />;
+      <Route path="/" component={Home} />
     </MainLayout>
   );
 }
