@@ -6,7 +6,7 @@ import {
   CloseButton,
 } from "@chakra-ui/react";
 
-const RequestAccess = () => {
+export const RequestAccess = () => {
   return (
     <Alert status="error">
       <AlertIcon />

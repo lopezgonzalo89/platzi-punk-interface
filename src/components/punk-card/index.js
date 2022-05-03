@@ -6,7 +6,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-const PunkCard = ({ image, name, ...props }) => {
+export const PunkCard = ({ image, name, ...props }) => {
   return (
     <Box
       role={"group"}
